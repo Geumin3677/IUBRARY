@@ -1,0 +1,108 @@
+{
+    "Films" : [
+        {
+            "name" : "드림",
+            "year" : "2023(예정)",
+            "type" : "영화",
+            "role" : "이소민 역",
+            "imgUrl" : "img/dm1.jpg",
+            "color" : "#31b675"
+        },
+        {
+            "name" : "브로커",
+            "year" : "2022",
+            "type" : "영화",
+            "role" : "소영 역",
+            "imgUrl" : "img/dm2.jpg",
+            "color" : "#b0c4dd"
+        },
+        {
+            "name" : "아무도<br></br>없는 곳",
+            "year" : "2021",
+            "type" : "영화",
+            "role" : "미영 역",
+            "imgUrl" : "img/dm3.jpg",
+            "color" : "#1a6b4a"
+        },
+        {
+            "name" : "호텔 델루나",
+            "year" : "2019",
+            "type" : "드라마",
+            "role" : "장만월 역",
+            "imgUrl" : "img/dm4.jpg",
+            "color" : "#222246"
+        },
+        {
+            "name" : "페르소나",
+            "year" : "2019",
+            "type" : "영와",
+            "role" : "딸, 은, 한나, 지은 역",
+            "imgUrl" : "img/dm5.jpg",
+            "color" : "#191919"
+        },
+        {
+            "name" : "나의 아저씨",
+            "year" : "2018",
+            "type" : "드라마",
+            "role" : "이지안 역",
+            "imgUrl" : "img/dm6.jpg",
+            "color" : "#4f3e2e"
+        },
+        {
+            "name" : "달의 연인 - <br></br>보보경심 려",
+            "year" : "2016",
+            "type" : "드라마",
+            "role" : "해수 역",
+            "imgUrl" : "img/dm7.jpg",
+            "color" : "#191919"
+        },
+        {
+            "name" : "프로듀사",
+            "year" : "2015",
+            "type" : "드라마",
+            "role" : "신디 역",
+            "imgUrl" : "img/dm8.jpg",
+            "color" : "#1784dd"
+        },
+        {
+            "name" : "예쁜 남자",
+            "year" : "2013",
+            "type" : "드라마",
+            "role" : "김보통 역",
+            "imgUrl" : "img/dm9.jpg",
+            "color" : "#8b7b7b"
+        },
+        {
+            "name" : "최고다<br></br>이순신",
+            "year" : "2012",
+            "type" : "드라마",
+            "role" : "이순신 역",
+            "imgUrl" : "img/dm10.jpg",
+            "color" : "#f47181"
+        },
+        {
+            "name" : "새미의<br></br>어드벤쳐 2",
+            "year" : "2012",
+            "type" : "영화",
+            "role" : "엘라 역 (더빙)",
+            "imgUrl" : "img/dm11.jpg",
+            "color" : "#14d8ff"
+        },
+        {
+            "name" : "초대받지<br></br>못한 손님",
+            "year" : "2011",
+            "type" : "영화",
+            "role" : "아이유 역",
+            "imgUrl" : "img/dm12.jpg",
+            "color" : "#af9797"
+        },
+        {
+            "name" : "드림하이",
+            "year" : "2011",
+            "type" : "드라마",
+            "role" : "김필숙 역",
+            "imgUrl" : "img/dm13.jpg",
+            "color" : "#c3886a"
+        }
+    ]
+}
