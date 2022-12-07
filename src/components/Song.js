@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import AlbumData from '../Albums.json'
 import './SongDetail.css';
 import NotFound from "./NotFound";
+import SongPlayer from "./SongPlayer";
 
 const SongDetail = () => {
     const SongName = useParams().SongName
@@ -12,13 +13,14 @@ const SongDetail = () => {
     const SongData = ABData?.track.find(name => name.title === SongName)
 
     const Lyric = ABData.Detail.lyrics[ABData.track.findIndex(name => name.title === SongName)]
+    const vid = ABData.Detail.musicVids[ABData.track.findIndex(name => name.title === SongName)]
 
     if(ABData === undefined || SongData === undefined)
     { 
         return(
             <NotFound />
         )
-    }
+    } 
 
     return (
         <div className="App">
@@ -28,8 +30,9 @@ const SongDetail = () => {
                     <div className="SPCxt">
                         <div className="SPInfoCxt">
                             <img className="SPImg" src={`/${ABData.imgUrl}`} />
-                            <div>{SongData.title}</div>
-                            <div>{AlbumName}</div>
+                            <SongPlayer vid={vid}/>
+                            <div className="SPTitle">{SongData.title}</div>
+                            <div className="SPAbname">{AlbumName}</div>
                         </div>
                         <div className="SPLyricCxt">
                             <div className="SPL">가사</div>
