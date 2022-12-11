@@ -12,7 +12,7 @@
 
 .ALTBg {
     min-height: 100%;
-    min-width: 730px;
+    min-width: 1055px;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -29,8 +29,8 @@
 }
 
 .ALTitle {
-    font-size: 130px;
-    line-height: 110px;
+    font-size: max(8vw, 91px);
+    line-height: max(7vw, 79px);
 }::selection {
     background-color: rgb(184, 149, 250);
     color: white;
@@ -38,7 +38,7 @@
 
 .ALsTitle {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .ALDate {

@@ -20,7 +20,32 @@ const SongDetail = () => {
         return(
             <NotFound />
         )
-    } 
+    }
+
+    const observe = (element) => {
+        if (!element) {
+            return;
+        }
+
+        observer.observe(element);
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const { target, isIntersecting } = entry;
+
+            if (isIntersecting) {
+                target.classList.add("item--show");
+                return;
+            }
+        });
+    })
+
+    function LinkToAlbum(a, b, c)
+    {
+        //a => 현재 앨범 데이터 / b => 이전 = -1 다음 = +1
+        var song = ABData.track[ABData.track.findIndex(name => name.title === SongData.title) + b].title
+        window.location.href = `/Album/${ABData.name}/${song}`
+    }
 
     return (
         <div className="App">
@@ -29,14 +54,38 @@ const SongDetail = () => {
                 <div className="SPBg" style={{backgroundColor: ABData.color}}>
                     <div className="SPCxt">
                         <div className="SPInfoCxt">
-                            <img className="SPImg" src={`/${ABData.imgUrl}`} />
-                            <SongPlayer vid={vid}/>
-                            <div className="SPTitle">{SongData.title}</div>
-                            <div className="SPAbname">{AlbumName}</div>
+                            <img ref={observe} className="SPImg" src={`/${ABData.imgUrl}`} />
+                            <div ref={observe} className="MusicCtr">
+                                <div className="SPTitle">{SongData.title}</div>
+                                <Link to={`/Album/${AlbumName}`}>
+                                    <div className="SPAbname">{AlbumName}</div>
+                                </Link>
+                                <SongPlayer vid={vid} ABData={ABData}/>
+                            </div>
                         </div>
                         <div className="SPLyricCxt">
-                            <div className="SPL">가사</div>
-                            <pre className="SPLyric">{Lyric}</pre>
+                            <div ref={observe} className="SPL">가사</div>
+                            <div ref={observe} className="grad">
+                                <pre className="SPLyric" style={{background: `1linear-gradient(to Top, ${ABData.color} 0%, ${ABData.color} 10%, #ffffff00 10%, #ffffff00 100%)` }}>{Lyric}</pre>
+                            </div>
+                        </div>
+                        <div ref={observe} className="ALButtons SongBtnMargin">
+                        <button className="ALButton" onClick={() => {window.location.href= `/Album/${ABData.name}`}}><ion-icon class='ALicon' name="arrow-forward-outline"></ion-icon></button>
+                            {
+                                (ABData.track.findIndex(name => name.title === SongData.title) !== 0) ? (
+                                    <button className="ALButton" onClick={LinkToAlbum.bind(this, ABData, -1)}><ion-icon class='ALicon' name="chevron-up-outline"></ion-icon></button>
+                                ) : (
+                                    <></>
+                                )
+                            }
+                            {
+                                ((ABData.track.findIndex(name => name.title === SongData.title) + 1) !== ABData.track.length) ? (
+                                    <button className="ALButton" onClick={LinkToAlbum.bind(this, ABData, 1)}><ion-icon class='ALicon' name="chevron-down-outline"></ion-icon></button>
+                                ) : (
+                                    <></>
+                                )
+                            } 
+                        <div className="SongNum">{ABData.track.findIndex(name => name.title === SongData.title) + 1}</div>
                         </div>
                     </div>
                 </div>

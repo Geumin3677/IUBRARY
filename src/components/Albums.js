@@ -113,7 +113,7 @@ class Albums extends React.Component {
                 }
 
                 var songNum = document.createElement('div')
-                songNum.className = 'SongNum'
+                songNum.className = 'SongNum1'
                 songNum.innerHTML = `${this.state.ShowAlbum[5].track.indexOf(s) + 1}`
                 song.appendChild(songNum)
 
@@ -148,8 +148,8 @@ class Albums extends React.Component {
         this.state.ShowAlbum[5].track.map((song) => {
             res.push(
                 <div className='Song'>
-                    <div className='SongNum'>{this.state.ShowAlbum[5].track.indexOf(song) + 1}</div>
-                    <div className='SongTitle'>{song.title}</div>
+                    <div className='SongNum1'>{this.state.ShowAlbum[5].track.indexOf(song) + 1}</div>
+                        <div className='SongTitle'>{song.title}</div>
                     {
                         (song.isTitle) ? (
                             <>

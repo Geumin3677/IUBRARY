@@ -56,14 +56,14 @@ const AlbumDetail = () => {
                         <div className="ALButtons">
                         <button className="ALButton" onClick={() => {window.location.href= '/Albums'}}><ion-icon class='ALicon' name="arrow-forward-outline"></ion-icon></button>
                             {
-                                ((AlbumData.Albums.findIndex(name => name.name === ABData.name) - 1) != -1) ? (
+                                ((AlbumData.Albums.findIndex(name => name.name === ABData.name) - 1) !== -1) ? (
                                     <button className="ALButton" onClick={LinkToAlbum.bind(this, ABData, -1)}><ion-icon class='ALicon' name="chevron-up-outline"></ion-icon></button>
                                 ) : (
                                     <></>
                                 )
                             }
                             {
-                                ((AlbumData.Albums.findIndex(name => name.name === ABData.name) + 1) != AlbumData.Albums.length) ? (
+                                ((AlbumData.Albums.findIndex(name => name.name === ABData.name) + 1) !== AlbumData.Albums.length) ? (
                                     <button className="ALButton" onClick={LinkToAlbum.bind(this, ABData, 1)}><ion-icon class='ALicon' name="chevron-down-outline"></ion-icon></button>
                                 ) : (
                                     <></>
@@ -93,6 +93,16 @@ const AlbumDetail = () => {
                                                 <Link to={`/Album/${AlbumName}/${song.title}`}>
                                                     <div style={{color: ABData.color}} className="songTitle">{song.title}</div>
                                                 </Link>
+                                                {
+                                                    (song.isTitle) ? (
+                                                        <>
+                                                            <div className='TitleSign'>TITLE</div>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                        </>
+                                                    )
+                                                }
                                                 <div className="songTime">{song.time}</div>
                                             </div>
                                         ))
