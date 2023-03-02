@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/IUBRARY/static/css/main.389bf668.css",
-    "main.js": "/IUBRARY/static/js/main.9a407f4e.js",
+    "main.css": "/IUBRARY/static/css/main.977857d0.css",
+    "main.js": "/IUBRARY/static/js/main.86ffcc67.js",
     "index.html": "/IUBRARY/index.html",
-    "main.389bf668.css.map": "/IUBRARY/static/css/main.389bf668.css.map",
-    "main.9a407f4e.js.map": "/IUBRARY/static/js/main.9a407f4e.js.map"
+    "main.977857d0.css.map": "/IUBRARY/static/css/main.977857d0.css.map",
+    "main.86ffcc67.js.map": "/IUBRARY/static/js/main.86ffcc67.js.map"
   },
   "entrypoints": [
-    "static/css/main.389bf668.css",
-    "static/js/main.9a407f4e.js"
+    "static/css/main.977857d0.css",
+    "static/js/main.86ffcc67.js"
   ]
 }
