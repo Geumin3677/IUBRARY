@@ -1,9 +1,11 @@
 # IUBRARY 💜
 
 ## IU + LIBRARY = IUBRARY 
+
+### [Preview](https://geumin3677.github.io/IUBRARY/)
+
 ### 기획의도
-IU의 모든것을 담은 팬페이지 제작
-[Preview](https://geumin3677.github.io/IUBRARY/)
+IU의 모든것을 담은 팬페이지 제작<br/>
 
 ## 구현 내용
 
